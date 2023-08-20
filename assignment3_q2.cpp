@@ -13,8 +13,8 @@ void swap(char arr[], int i, int j){
 }
 
 void bubble_sort(char arr[], int size){
+    int swapped = 0;
     for (int i=0; i<size; i++){
-        int swapped = 0;
         for (int j=0; j<size-i-1; j++){
             if (arr[j] > arr[j+1]){
                 swap(arr, j, j+1);
@@ -28,17 +28,14 @@ void bubble_sort(char arr[], int size){
 
 void insertion_sort(char arr[], int size){
     for (int i=0; i<size; i++){
-        int swapped = 0;
         int j=i-1;
         int key = arr[i];
         while (j>=0 && arr[j] > key){
             arr[j+1] = arr[j];
             j--;
-            swapped = 1;
         }
         arr[j+1] = key;
         printarray(arr, size);
-        if (!swapped) return;
     }
 }
 
@@ -88,7 +85,7 @@ int main() {
         scanf(" %c", &arr2[i]);
     }
     
-    printf("Insertion sort of arr1: \n");
+    printf("Bubble sort of arr1: \n");
     bubble_sort(arr1, n1);
     printf("Insertion sort of arr2: \n");
     insertion_sort(arr2, n2);
