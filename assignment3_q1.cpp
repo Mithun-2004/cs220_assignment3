@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #define N 10
 
-void printarray(int arr[], int size){
-    for (int i=0; i<size; i++){
-        printf("%d ", arr[i]);
+void printarray(int arr[], int size) {
+    for (int i = 0; i < size; i++){
+        printf("%d\t", arr[i]);
     }
     printf("\n");
 }
@@ -16,9 +16,9 @@ void swap(int arr[], int i, int j){
 }
 
 void selection_sort(int arr[], int size){
-    for (int i=0; i<size; i++){
+    for (int i = 0; i < size; i++){
         int min_index = i;
-        for (int j=i; j<size; j++){
+        for (int j = i; j < size; j++){
             if (arr[j] < arr[min_index]){
                 min_index = j;
             }    
@@ -31,7 +31,7 @@ void selection_sort(int arr[], int size){
 int main() {
 	int arr[N];
 	srand(time(0));
-    for (int i=0; i<N; i++){
+    for (int i = 0; i < N; i++){
 	int num = rand()%99 + 1;
 	arr[i] = num;
 	}
