@@ -18,10 +18,10 @@ void swap(int arr[], int i, int j){
 
 void selection_sort(int arr[], int size){
     for (int i = 0; i < size; i++){
-        int min_index = i;
+        int min_index = i;  //variable for storing the index of the element with minimum value.
         for (int j = i; j < size; j++){
             if (arr[j] < arr[min_index]){
-                min_index = j;
+                min_index = j;  //updating the minimum index.
             }    
         }
         swap(arr, min_index, i);
@@ -31,12 +31,12 @@ void selection_sort(int arr[], int size){
 
 int main() {
 	int arr[N];
-	srand(time(0));
+	srand(time(0));  //seeding srand function with the current time.
     for (int i = 0; i < N; i++){
 	int num = rand()%99 + 1;
 	arr[i] = num;
 	}
-    int counter = 0;    
+    int counter = 0;    //For storing the number of numbers in the given range.
     for (int i=0; i<N; i++){
         if (arr[i] >= 10 && arr[i] <= 90) counter++;
     }
